@@ -41,6 +41,58 @@
                             <input class="form-input" type="password" id="password-signup" />
                         </div>
                         <div class="form-group">
+                            <label for="sex-signup">Sex:</label>
+                            <label>
+                            <input name="sex-signup" type="radio" value="woman" checked="true" onClick="getSexValue()"/>
+                            <span>Woman</span>
+                          </label>
+                            <label>
+                            <input name="sex-signup" type="radio" value="man" onClick="getSexValue()"/>
+                            <span>Man</span>
+                          </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="age">Age:</label>
+                            <div class="age-select">
+                                <select>
+                                  <option value="" disabled selected>Choose your age</option>
+                                  <option value="1">18</option>
+                                  <option value="2">19</option>
+                                  <option value="3">20</option>
+                                  <option value="1">21</option>
+                                  <option value="2">22</option>
+                                  <option value="3">23</option>
+                                  <option value="1">24</option>
+                                  <option value="2">25</option>
+                                  <option value="3">26</option>
+                                  <option value="1">27</option>
+                                  <option value="2">28</option>
+                                  <option value="3">29</option>
+                                  <option value="3">30</option>
+                                  <option value="1">31</option>
+                                  <option value="2">32</option>
+                                  <option value="3">33</option>
+                                  <option value="1">34</option>
+                                  <option value="2">35</option>
+                                  <option value="3">36</option>
+                                  <option value="3">37</option>
+                                  <option value="1">38</option>
+                                  <option value="2">39</option>
+                                  <option value="3">40</option>
+                                  <option value="1">41</option>
+                                  <option value="2">42</option>
+                                  <option value="3">43</option>
+                                  <option value="2">44</option>
+                                  <option value="3">45</option>
+                                  <option value="1">46</option>
+                                  <option value="2">47</option>
+                                  <option value="3">48</option>
+                                  <option value="2">49</option>
+                                  <option value="3">50</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
                             <button class="btn btn-primary" type="submit">signup</button>
                         </div>
                     </form>
@@ -54,6 +106,27 @@
     <!--  Scripts-->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('select');
+            // var instances = M.FormSelect.init(elems, options);
+        });
+
+        // Or with jQuery
+
+        $(document).ready(function() {
+            $('select').formSelect();
+        });
+		
+		function getSexValue(){
+	var radio = document.getElementsByName("sex-signup");
+	for (i=0; i<radio.length; i++) {
+		if (radio[i].checked) {
+			console.log( radio[i].value);
+		}
+	}
+}
+    </script>
 </body>
 
 </html>
