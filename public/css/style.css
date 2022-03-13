@@ -1,0 +1,56 @@
+/* Custom Stylesheet */
+
+
+/**
+ * Use this file to override Materialize files
+ * Made By MaterializeCSS.com
+ */
+
+.icon-block {
+    text-align: center;
+}
+
+.icon-block img {
+    width: 150px;
+    height: auto;
+    border-radius: 25px;
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+.my-info img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.section {
+    margin-top: 2rem;
+}
+
+.representation {
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.match-y {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    background: url(../images/match-y.png) no-repeat;
+}
+
+.match-n {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    background: url(../images/match-n.png) no-repeat;
+}
