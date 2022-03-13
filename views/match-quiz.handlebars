@@ -2,43 +2,26 @@
    <div class="col s12 m3">
     {{>user-detail}}
      </div>
+     <!-- if users have not done the quiz -->
       <div class="col s12 m9 left-align">
- <div class="row">
-         <div id="questions">
-           <h2 id="question-title">What is your favorite color:</h2>
-            <div id="choices" class="choices">
-              <form action="#">
-                  <p>
-                                        <label>
-                                        <input name="group1" type="radio" checked />
-                                        <span>Red</span>
-                                      </label>
-                                    </p>
-                                    <p>
-                                        <label>
-                                        <input name="group1" type="radio" />
-                                        <span>Yellow</span>
-                                      </label>
-                                    </p>
-                                    <p>
-                                        <label>
-                                        <input name="group1" type="radio"  />
-                                        <span>Grey</span>
-                                      </label>
-                                    </p>
-                                    <p>
-                                        <label>
-                                        <input name="group1" type="radio" />
-                                        <span>Blue</span>
-                                      </label>
-                                    </p>
-                                </form>
-                            </div>
+      <div class="wrapper">
+             <div id="start-screen" class="start center-align">
+             <p class="text">Are you wondering who matches you?<br/> Let's find out!</p>
+                            <button id="start" class="btn">Start Quiz</button>
                         </div>
-                    </div>
-                    <div class="row match-footer">
-                        <div class="match"><a class="btn" href="match-result.html">Next</a></div>
+                        <div id="questions" class="hide">
+                            <h2 id="question-title"></h2>
+                            <div id="choices" class="choices"></div>
+                        </div>
+                        <div id="end-screen" class="hide">
+                            <h2>All done!</h2>
+                            <button id="submit">Submit</button>
+                            </p>
+                        </div>
                     </div>
                 </div>
 
             </div>
+
+    <script src="js/questions.js"></script>
+    <script src="js/quizLogic.js"></script>

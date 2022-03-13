@@ -2,9 +2,6 @@
    <div class="col s12 m3">
      {{>user-detail}}
      </div>
-               
-               
-               {{#if quizIsDone}}
                 <!-- if users have done the quiz -->
                   <div class="col s12 m9">
                     <p class="text">People who matches you:</p>
@@ -13,33 +10,13 @@
                         {{#each}}
                         <div class="col s12 m3">
                             <div class="icon-block">
-                                <img src="images/5.png" class="big-avatar">
-                                <div class="representation">Grace, 24</div>
+                                <img src="images/{{user.img_url}}.png" class="big-avatar">
+                                <div class="representation">{{user.user_name}}, {{user.age}}</div>
                                 <div class="match"><a class="btn" href="#">Chat</a></div>
                             </div>
                         </div>
                    {{/each}}
                   </div>
                 </div>
-              <!-- if users have not done the quiz -->
-              {{else}}
-              <div class="col s12 m9 center-align">
-                  <!-- No data -->             
-                    <div class="row match-footer">
-                       <p class="result">People who matches you: <em>0</em> since you haven't got a quiz done yet. </p>
-                        <p class="text">Are you wondering who matches you?<br/> Let's find out!</p>
-                        <div class="match"><a class="btn" href="match-quiz.html">Get Started!</a></div>
-                </div>
-                </div>
-                {{else}}
- <!-- if users have done the quiz -->
-             
-{{/if}}
-
-
-
-
-
-
-
-            </div>
+ 
+</div>
