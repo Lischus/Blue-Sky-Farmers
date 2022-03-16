@@ -4,7 +4,7 @@ const Result = require('../../models/Result');
 
 router.post('/quiz', async (req, res) => {
     try {
-      const myMatch = await Results.create({
+      const myMatch = await Result.create({
           user_id: req.body.user_name,
         user_answers: req.body.user_answers});
   

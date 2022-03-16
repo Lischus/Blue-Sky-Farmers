@@ -3,6 +3,6 @@ const userRoutes = require('./userRoutes');
 const myMatchRoutes = require ('./myMatchRoutes')
 
 router.use('/users', userRoutes);
-router.user('/mymatches', myMatchRoutes)
+router.use('/mymatch', myMatchRoutes)
 
 module.exports = router;
