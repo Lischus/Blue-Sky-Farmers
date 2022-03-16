@@ -1,0 +1,27 @@
+
+[
+    {
+    "user_one": "Larry David",
+    "user_two": "Apple Alexa"
+  },
+  {
+    "user_one": "Apple Alexa",
+    "user_two": "Larry David"
+  },
+  {
+    "user_one": "Larry David",
+    "user_two": "Zoe Kravitz"
+  },
+  {
+    "user_one": "Batman",
+    "user_two": "Zoe Kravitz"
+  },
+  {
+    "user_one": "Zoe Kravitz",
+    "user_two": "Batman"
+  },
+  {
+    "user_one": "Zoe Kravitz",
+    "user_two": "Larry David"
+  }
+]
