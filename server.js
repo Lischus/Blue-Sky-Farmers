@@ -1,21 +1,19 @@
-const express = require("express");
-const mysql = require("mysql2");
-const sequelize = require("./config/connection");
-require("dotenv").config();
+const express = require('express');
+const mysql = require('mysql2');
+const sequelize = require('./config/controller');
+require('dotenv').config();
 
 const path = require('path');
-const express = require('express');
 // Import express-session
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 
 const routes = require('./controllers');
-const sequelize = require('./config/controller');
-const helpers = require('./utils/helpers');
+// const helpers = require('./utils/helpers');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-const SECRET_PASS = process.env.SECRET_PASS
+const SECRET_PASS = process.env.SECRET_PASS;
 
 // Set up sessions
 const sess = {
@@ -26,7 +24,7 @@ const sess = {
 
 app.use(session(sess));
 
-const hbs = exphbs.create({ helpers });
+const hbs = exphbs.create();
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
@@ -37,15 +35,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
-
 // import sequelize connection
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`App listening on port ${PORT}`));
 });
-
-
-
-
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -65,4 +58,3 @@ app.use(routes);
 // );
 
 // sync sequelize models to the database, then turn on the server
-

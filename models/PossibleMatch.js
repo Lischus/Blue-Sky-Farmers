@@ -1,6 +1,6 @@
-const { Model, DataTypes } = require("sequelize");
+const { Model, DataTypes } = require('sequelize');
 
-const sequelize = require("../config/controller.js");
+const sequelize = require('../config/controller.js');
 
 class PossibleMatch extends Model {}
 
@@ -16,27 +16,18 @@ PossibleMatch.init(
     user_one: {
       type: DataTypes.STRING,
       allowNull: false,
-      references: {
-          model: 'user',
-          key: 'id',
-      }
     },
     user_two: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        references: {
-            model: 'user',
-            key: 'id',
-        }
-      },
-
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "possibleMatch",
+    modelName: 'possibleMatch',
   }
 );
 
