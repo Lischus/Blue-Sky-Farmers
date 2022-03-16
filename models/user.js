@@ -1,6 +1,6 @@
-const { Model, DataTypes } = require("sequelize");
+const { Model, DataTypes } = require('sequelize');
 
-const sequelize = require("../config/controller.js");
+const sequelize = require('../config/controller.js');
 const bcrypt = require('bcrypt');
 
 class User extends Model {}
@@ -18,26 +18,25 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        isAlphanumeric: true
+        isAlphanumeric: true,
       },
     },
     age: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-      },
-      sex: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      group_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-      },
-      password: {
-          type: DataType.STRING,
-          allowNull: false
-      },
-
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    sex: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    group_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   },
 
   {
@@ -48,7 +47,10 @@ User.init(
       },
       beforeUpdate: async (updatedUserData) => {
         if (updatedUserData.password) {
-        updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+          updatedUserData.password = await bcrypt.hash(
+            updatedUserData.password,
+            10
+          );
         }
         return updatedUserData;
       },
