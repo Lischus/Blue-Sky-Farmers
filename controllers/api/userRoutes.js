@@ -67,7 +67,10 @@ router.post('/login', async (req, res) => {
       return;
     }
 
-    const validPassword = await userData.checkPassword(req.body.password);
+    const validPassword = await bcrypt.compare(
+        req.body.password,
+        userData.password
+      );
 
     if (!validPassword) {
       res
@@ -75,6 +78,7 @@ router.post('/login', async (req, res) => {
         .json({ message: 'Incorrect email or password, please try again' });
       return;
     }
+    
 
     req.session.save(() => {
       req.session.user_id = userData.id;
@@ -99,3 +103,6 @@ router.post('/logout', (req, res) => {
 });
 
 module.exports = router;
+
+
+
