@@ -1,35 +1,35 @@
 var currentQuestionIndex = 0;
 
-var questionsEl = document.getElementById('questions');
-var choicesEl = document.getElementById('choices');
-var submitBtn = document.getElementById('submit');
-var startBtn = document.getElementById('start');
+var questionsEl = document.getElementById("questions");
+var choicesEl = document.getElementById("choices");
+var submitBtn = document.getElementById("submit");
+var startBtn = document.getElementById("start");
 
-let user_answers = [];
+let user_answer = [];
 let answerNum;
 
 function startQuiz() {
-    var startScreenEl = document.getElementById('start-screen');
-    startScreenEl.setAttribute('class', 'hide');
-    questionsEl.removeAttribute('class');
+    var startScreenEl = document.getElementById("start-screen");
+    startScreenEl.setAttribute("class", "hide");
+    questionsEl.removeAttribute("class");
     getQuestion();
 }
 
 function getQuestion() {
     var currentQuestion = questions[currentQuestionIndex];
-    var titleEl = document.getElementById('question-title');
+    var titleEl = document.getElementById("question-title");
     titleEl.textContent = currentQuestion.title;
 
-    choicesEl.innerHTML = '';
+    choicesEl.innerHTML = "";
 
     // loop over choices
     currentQuestion.choices.forEach(function(choice, i) {
         // create new button for each choice
-        var choiceNode = document.createElement('button');
-        choiceNode.setAttribute('class', 'choice');
-        choiceNode.textContent = i + 1 + '. ' + choice;
-        choiceNode.setAttribute('data-number', i + 1);
-        answerNum = choiceNode.getAttribute('data-number')
+        var choiceNode = document.createElement("button");
+        choiceNode.setAttribute("class", "choice");
+        choiceNode.textContent = i + 1 + ". " + choice;
+        choiceNode.setAttribute("data-number", i + 1);
+        answerNum = choiceNode.getAttribute("data-number")
             // attach click event listener to each choice
         choiceNode.onclick = questionClick;
         // display on the page
@@ -39,10 +39,10 @@ function getQuestion() {
 
 function questionClick(event) {
     const ele = event.target;
-    const answerNum = ele.getAttribute("data-number");
-    user_answers.push(answerNum);
-    console.log(user_answers);
-    // move to next question
+    const answerNum = ele.getAttribute("data-number")
+    user_answer.push(answerNum);
+    console.log(user_answer)
+        // move to next question
     currentQuestionIndex++;
 
     // check if we've run out of questions
@@ -67,7 +67,7 @@ async function postAnswer(event) {
     event.preventDefault();
     const response = await fetch(`/api/mymatch/quiz`, {
         method: 'POST',
-        body: JSON.stringify({ user_answers }),
+        body: JSON.stringify({ user_id, user_answer }),
         headers: {
             'Content-Type': 'application/json',
         },

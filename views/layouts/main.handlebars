@@ -6,19 +6,19 @@
     <title>Blue Sky Farmer!</title>
     <!-- CSS  -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
-    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
 </head>
 <body>
     <nav class="nav-custom">
         <div class="nav-wrapper container">
             <a href="/" class="brand-logo">Blue Sky Farmer</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="/mymatch">My Match</a></li>
+                <li><a href="/mymatch">My Match</a></li><li><a href="/quiz">Quiz</a></li>
                 <!-- Conditionally render login or logout links -->
                 {{#if logged_in}}
-                <button class="no-button" id="logout">logout</button>
+               <li> <button class="no-button" id="logout">logout</button></li>
                 {{else}} 
-                <a href="/login">login</a>{{/if}}
+               <li><a href="/login">login</a>{{/if}}</li>
             </ul>
         </div>
     </nav>
@@ -35,5 +35,18 @@
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+   // var instances = M.FormSelect.init(elems, options);
+  });
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('select').formSelect();
+  });
+       </script> 
 </body>
 </html>
