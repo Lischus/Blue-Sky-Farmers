@@ -1,8 +1,6 @@
 const { Model, DataTypes } = require("sequelize");
-
-
 const sequelize = require("../config/controller.js");
-const bcrypt = require('bcrypt');
+
 
 class Result extends Model {}
 
