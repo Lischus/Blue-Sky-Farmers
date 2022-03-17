@@ -1,6 +1,5 @@
-const { Model, DataTypes } = require("sequelize");
-const sequelize = require("../config/controller.js");
-
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/controller.js');
 
 class Result extends Model {}
 
@@ -11,31 +10,27 @@ Result.init(
       type: DataTypes.INTEGER,
       primaryKey: true,
       allowNull: false,
-      references: {
-        model: 'user',
-        key: 'id',
-    }
     },
     user_answer_one: {
       type: DataTypes.STRING,
       allowNull: false,
     },
     user_answer_two: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      user_answer_three: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      user_answer_four: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      user_answer_five: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    user_answer_three: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    user_answer_four: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    user_answer_five: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   },
   {
     sequelize,
