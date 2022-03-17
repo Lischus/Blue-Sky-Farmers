@@ -2,7 +2,7 @@
         "user_name": "Larry David",
         "age": 45,
         "sex": "man",
-        "img_url": 5,
+        "img_url": 2,
         "group_id": 1,
         "password": "heyJoe"
     },
@@ -10,7 +10,7 @@
         "user_name": "Apple Alexa",
         "age": 22,
         "sex": "woman",
-        "img_url": 5,
+        "img_url": 7,
         "group_id": 25,
         "password": "OverWatch"
     },
@@ -18,7 +18,7 @@
         "user_name": "Sandy Cheeks",
         "age": 35,
         "sex": "woman",
-        "img_url": 7,
+        "img_url": 6,
         "group_id": 17,
         "password": "OnePiece"
     },
@@ -34,7 +34,7 @@
         "user_name": "Zoe Kravitz",
         "age": 28,
         "sex": "woman",
-        "img_url": 6,
+        "img_url": 5,
         "group_id": 8,
         "password": "Catwoman"
     }
