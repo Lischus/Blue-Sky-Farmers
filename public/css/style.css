@@ -8,6 +8,7 @@
 
 .icon-block {
     text-align: center;
+    margin-bottom: 1rem;
 }
 
 .icon-block img {
@@ -53,4 +54,71 @@ h2 {
 
 .select-wrapper {
     display: inline-block;
+}
+
+
+/* quiz */
+
+button {
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 100%;
+    background-color: #26a69a;
+    border-radius: 5px;
+    color: white;
+    border: 0;
+    transition: background-color 0.1s;
+    padding: 3px 15px 5px;
+}
+
+button:hover {
+    background-color: #80cbc4;
+}
+
+.choices button {
+    display: block;
+}
+
+input[type="text"] {
+    font-size: 100%;
+}
+
+ol {
+    padding-left: 0px;
+    max-height: 400px;
+    overflow: auto;
+}
+
+li {
+    padding: 5px;
+    list-style: decimal inside none;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+.wrapper h2 {
+    text-align: left;
+}
+
+.hide {
+    display: none;
+}
+
+.start {
+    text-align: center;
+}
+
+h2,
+h3,
+.text {
+    font-size: 1.2rem;
+}
+
+.wrapper #end-screen h2 {
+    text-align: center;
 }
