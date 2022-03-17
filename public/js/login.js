@@ -2,14 +2,14 @@ const loginFormHandler = async(event) => {
     event.preventDefault();
 
     // Collect values from the login form
-    const username = document.querySelector('#username-login').value.trim();
+    const user_name = document.querySelector('#username-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
 
-    if (username && password) {
+    if (user_name && password) {
         // Send a POST request to the API endpoint
         const response = await fetch('/api/users/login', {
             method: 'POST',
-            body: JSON.stringify({ username, password }),
+            body: JSON.stringify({ user_name, password }),
             headers: { 'Content-Type': 'application/json' },
         });
 
@@ -21,7 +21,43 @@ const loginFormHandler = async(event) => {
         }
     }
 };
+const signupFormHandler = async(event) => {
+    event.preventDefault();
+
+    const user_name = document.querySelector('#username-signup').value.trim();
+    const password = document.querySelector('#password-signup').value.trim();
+    const age = document.querySelector('#age-signup').value.trim();
+
+
+    function getSexValue() {
+        var radio = document.getElementsByName('sex-signup');
+        for (i = 0; i < radio.length; i++) {
+            if (radio[i].checked) {
+                return radio[i].value;
+            }
+        }
+    }
+    const sex = getSexValue();
+    if (user_name && password && sex && age) {
+        const response = await fetch('/api/users', {
+            method: 'POST',
+            body: JSON.stringify({ user_name, age, sex, password }),
+            headers: { 'Content-Type': 'application/json' },
+        });
+
+        if (response.ok) {
+            document.location.replace('/mymatch');
+        } else {
+            alert(response.statusText);
+        }
+    }
+};
+
 
 document
     .querySelector('.login-form')
     .addEventListener('submit', loginFormHandler);
+
+document
+    .querySelector('.signup-form')
+    .addEventListener('submit', signupFormHandler);
