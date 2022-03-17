@@ -1,12 +1,12 @@
 const express = require('express');
-const mysql = require('mysql2');
 const sequelize = require('./config/controller');
 require('dotenv').config();
-
 const path = require('path');
-// Import express-session
+
 const session = require('express-session');
 const exphbs = require('express-handlebars');
+// Import express-session
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const routes = require('./controllers');
 // const helpers = require('./utils/helpers');
@@ -19,7 +19,10 @@ const SECRET_PASS = process.env.SECRET_PASS;
 const sess = {
   secret: SECRET_PASS,
   resave: false,
-  saveUninitialized: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize,
+  }),
 };
 
 app.use(session(sess));
