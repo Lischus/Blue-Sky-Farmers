@@ -5,9 +5,7 @@ router.get('/', async(req, res) => {
     try {
 
         const userData = await User.findAll();
-        console.log(userData)
         const users = userData.map((project) => project.get({ plain: true }));
-        console.log(users)
         res.render('home', {
             users,
             logged_in: req.session.logged_in,
@@ -20,9 +18,7 @@ router.get('/quiz', withAuth, async(req, res) => {
     try {
         // Find the logged in user based on the session ID
         const userData = await User.findByPk(req.session.user_id);
-        console.log(req.session.user_id);
         const user = userData.get({ plain: true });
-        console.log(user)
         res.render('match-quiz', {
             ...user,
             logged_in: true
@@ -36,9 +32,7 @@ router.get('/mymatch', withAuth, async(req, res) => {
     try {
         // Find the logged in user based on the session ID
         const userData = await User.findByPk(req.session.user_id);
-        console.log(req.session.user_id);
         const user = userData.get({ plain: true });
-        console.log(user)
         res.render('mymatch', {
             ...user,
             logged_in: true
@@ -69,9 +63,7 @@ router.get('/chat', withAuth, async(req, res) => {
     try {
         // Find the logged in user based on the session ID
         const userData = await User.findByPk(req.session.user_id);
-        console.log(req.session.user_id);
         const user = userData.get({ plain: true });
-        console.log(user)
         res.render('chat', {
             ...user,
             logged_in: true

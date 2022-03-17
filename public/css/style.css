@@ -1,124 +1,137 @@
-/* Custom Stylesheet */
-
-
-/**
+    /* Custom Stylesheet */
+    /**
  * Use this file to override Materialize files
  * Made By MaterializeCSS.com
  */
-
-.icon-block {
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.icon-block img {
-    width: 150px;
-    height: auto;
-    border-radius: 25px;
-}
-
-.avatar {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-}
-
-h2 {
-    font-size: 1.5rem;
-}
-
-.my-info img {
-    width: 100px;
-    height: auto;
-    border-radius: 50%;
-}
-
-.section {
-    margin-top: 2rem;
-}
-
-.representation {
-    margin-bottom: 0.5rem;
-    font-size: 1.3rem;
-}
-
-.form-group label {
-    font-size: 1rem;
-    color: #666;
-    margin-right: 2rem;
-}
-
-.form-group {
-    margin-bottom: 1rem;
-}
-
-.select-wrapper {
-    display: inline-block;
-}
-
-
-/* quiz */
-
-button {
-    display: inline-block;
-    margin: 5px;
-    cursor: pointer;
-    font-size: 100%;
-    background-color: #26a69a;
-    border-radius: 5px;
-    color: white;
-    border: 0;
-    transition: background-color 0.1s;
-    padding: 3px 15px 5px;
-}
-
-button:hover {
-    background-color: #80cbc4;
-}
-
-.choices button {
-    display: block;
-}
-
-input[type="text"] {
-    font-size: 100%;
-}
-
-ol {
-    padding-left: 0px;
-    max-height: 400px;
-    overflow: auto;
-}
-
-li {
-    padding: 5px;
-    list-style: decimal inside none;
-}
-
-.wrapper {
-    margin: 0 auto;
-    max-width: 600px;
-    text-align: center;
-}
-
-.wrapper h2 {
-    text-align: left;
-}
-
-.hide {
-    display: none;
-}
-
-.start {
-    text-align: center;
-}
-
-h2,
-h3,
-.text {
-    font-size: 1.2rem;
-}
-
-.wrapper #end-screen h2 {
-    text-align: center;
-}
+    
+    nav {
+        background-color: #880e4f;
+    }
+    
+    nav .brand-logo {
+        font-family: 'Gochi Hand', cursive;
+    }
+    
+    .icon-block {
+        text-align: center;
+        margin-bottom: 2.5rem;
+    }
+    
+    .icon-block img {
+        width: 150px;
+        height: 150px;
+        border-radius: 25px;
+    }
+    
+    .avatar {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .my-info img {
+        width: 100px;
+        height: auto;
+        border-radius: 50%;
+    }
+    
+    .section {
+        margin-top: 2rem;
+    }
+    
+    .representation {
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+    }
+    
+    .form-group label {
+        font-size: 1rem;
+        color: #666;
+        margin-right: 2rem;
+    }
+    
+    .form-group {
+        margin-bottom: 1rem;
+    }
+    
+    .select-wrapper {
+        display: inline-block;
+    }
+    /* quiz */
+    
+    button {
+        display: inline-block;
+        margin: 5px;
+        cursor: pointer;
+        font-size: 100%;
+        background-color: #26a69a;
+        border-radius: 5px;
+        color: white;
+        border: 0;
+        transition: background-color 0.1s;
+        padding: 3px 15px 5px;
+    }
+    
+    button:hover {
+        background-color: #80cbc4;
+    }
+    
+    .no-button,
+    .no-button:hover {
+        background: none;
+    }
+    
+    .no-button:hover {
+        text-decoration: underline;
+    }
+    
+    .choices button {
+        display: block;
+    }
+    
+    input[type="text"] {
+        font-size: 100%;
+    }
+    
+    ol {
+        padding-left: 0px;
+        max-height: 400px;
+        overflow: auto;
+    }
+    
+    li {
+        padding: 5px;
+        list-style: decimal inside none;
+    }
+    
+    .wrapper {
+        margin: 0 auto;
+        max-width: 600px;
+        text-align: center;
+    }
+    
+    .wrapper h2 {
+        text-align: left;
+    }
+    
+    .hide {
+        display: none;
+    }
+    
+    .start {
+        text-align: center;
+    }
+    
+    h2,
+    h3,
+    .text {
+        font-size: 1.2rem;
+    }
+    
+    .wrapper #end-screen h2 {
+        text-align: center;
+    }

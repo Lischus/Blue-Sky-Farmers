@@ -3,7 +3,7 @@
                 {{#each users as |user|}}
                 <div class="col s12 m3">
                     <div class="icon-block">
-                        <img src="images/default.png" class="big-avatar">
+                        <img src="images/{{user.img_url}}.png" class="big-avatar">
                         <div class="representation">{{user.user_name}}, {{user.age}}</div>
                         <div class="match"><a class="btn" href="/chat">Chat</a></div>
                     </div>
