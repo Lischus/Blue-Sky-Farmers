@@ -17,12 +17,12 @@ const SECRET_PASS = process.env.SECRET_PASS;
 
 // Set up sessions
 const sess = {
-  secret: SECRET_PASS,
-  resave: false,
-  saveUninitialized: true,
-  store: new SequelizeStore({
-    db: sequelize,
-  }),
+    secret: 'SECRET_PASS',
+    resave: false,
+    saveUninitialized: true,
+    store: new SequelizeStore({
+        db: sequelize,
+    }),
 };
 
 app.use(session(sess));
@@ -40,7 +40,7 @@ app.use(routes);
 
 // import sequelize connection
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log(`App listening on port ${PORT}`));
+    app.listen(PORT, () => console.log(`App listening on port ${PORT}`));
 });
 
 app.use(express.json());

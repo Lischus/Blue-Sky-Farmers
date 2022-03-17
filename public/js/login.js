@@ -27,7 +27,7 @@ const signupFormHandler = async(event) => {
     const user_name = document.querySelector('#username-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
     const age = document.querySelector('#age-signup').value.trim();
-
+    const group_id = 9;
 
     function getSexValue() {
         var radio = document.getElementsByName('sex-signup');
@@ -41,7 +41,7 @@ const signupFormHandler = async(event) => {
     if (user_name && password && sex && age) {
         const response = await fetch('/api/users', {
             method: 'POST',
-            body: JSON.stringify({ user_name, age, sex, password }),
+            body: JSON.stringify({ user_name, age, sex, group_id, password }),
             headers: { 'Content-Type': 'application/json' },
         });
 
