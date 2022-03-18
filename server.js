@@ -2,6 +2,7 @@ const express = require('express');
 const sequelize = require('./config/controller');
 require('dotenv').config();
 const path = require('path');
+const socket = require('socket.io');
 
 const session = require('express-session');
 const exphbs = require('express-handlebars');
@@ -17,12 +18,12 @@ const SECRET_PASS = process.env.SECRET_PASS;
 
 // Set up sessions
 const sess = {
-    secret: 'SECRET_PASS',
-    resave: false,
-    saveUninitialized: true,
-    store: new SequelizeStore({
-        db: sequelize,
-    }),
+  secret: 'SECRET_PASS',
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize,
+  }),
 };
 
 app.use(session(sess));
@@ -39,8 +40,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
 // import sequelize connection
-sequelize.sync({ force: false }).then(() => {
-    app.listen(PORT, () => console.log(`App listening on port ${PORT}`));
+sequelize.sync({ force: false });
+// .then(() => {
+//   app.listen(PORT, () => console.log(`App listening on port ${PORT}`));
+// });
+
+const server = app.listen(PORT, function () {
+  console.log(`Listening on port ${PORT}`);
+  console.log(`http://localhost:${PORT}`);
 });
 
 app.use(express.json());
@@ -48,16 +55,29 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(routes);
 
-// mysql.createConnection(
-//   {
-//     host: "localhost",
-//     // MySQL username,
-//     user: process.env.DB_USER,
-//     // MySQL password
-//     password: process.env.DB_PW,
-//     database: "ecommerce_db",
-//   },
-//   console.log(`Connected to the ecommerce_db database.`)
-// );
+const io = socket(server);
 
-// sync sequelize models to the database, then turn on the server
+const activeUsers = new Set();
+
+io.on('connection', function (socket) {
+  console.log('Made socket connection');
+
+  socket.on('new user', function (data) {
+    socket.userId = data;
+    activeUsers.add(data);
+    io.emit('new user', [...activeUsers]);
+  });
+
+  socket.on('disconnect', () => {
+    activeUsers.delete(socket.userId);
+    io.emit('user disconnected', socket.userId);
+  });
+
+  socket.on('chat message', function (data) {
+    io.emit('chat message', data);
+  });
+
+  socket.on('typing', function (data) {
+    socket.broadcast.emit('typing', data);
+  });
+});
