@@ -1,30 +1,27 @@
 // list of all questions, choices, and answers
-var questions = [
-  {
-    title: 'What is your favorite color:',
-    choices: ['yellow', 'red', 'grey', 'blue'],
-  },
-  {
-    title: 'The condition in an if / else statement is enclosed within ____.',
-    choices: ['quotes', 'curly brackets', 'parentheses', 'square brackets'],
-  },
-  {
-    title: 'Arrays in JavaScript can be used to store ____.',
-    choices: [
-      'numbers and strings',
-      'other arrays',
-      'booleans',
-      'all of the above',
-    ],
-  },
-  {
-    title:
-      'String values must be enclosed within ____ when being assigned to variables.',
-    choices: ['commas', 'curly brackets', 'quotes', 'parentheses'],
-  },
-  {
-    title:
-      'A very useful tool used during development and debugging for printing content to the debugger is:',
-    choices: ['JavaScript', 'terminal / bash', 'for loops', 'console.log'],
-  },
+var questions = [{
+        title: 'Which color best represents your energy?',
+        choices: ['Gold', 'Violet', 'Hot pink', 'Aqua blue'],
+    },
+    {
+        title: 'What are you looking for in a best friend?',
+        choices: ['Someone who pushes you to be your best', 'Someone you can talk to', 'Someone you can always have fun with', 'Someone you can trust'],
+    },
+    {
+        title: 'Someone just spoiled the ending to the show you’ve been binge-watching. Your immediate reaction is . . .',
+        choices: [
+            'To feel utterly defeated.',
+            'To literally never speak to that person again.',
+            'This would never hapen - you are always up-to-date on the latest episode.',
+            'You do not care. You do not really watch TV.',
+        ],
+    },
+    {
+        title: 'Which club or activity would you be most likely to join? ',
+        choices: ['Debate team', 'Drama club', 'Book club', 'Track team'],
+    },
+    {
+        title: 'What is your favorite thing to watch?',
+        choices: ['Reality-TV competition', 'Broadway show', 'The hottest TV drama', 'A cult classic'],
+    },
 ];

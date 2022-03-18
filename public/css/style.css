@@ -65,24 +65,25 @@
     
     button {
         display: inline-block;
-        margin: 5px;
+        margin: 15px;
         cursor: pointer;
         font-size: 100%;
-        background-color: #26a69a;
-        border-radius: 5px;
-        color: white;
+        background-color: #eee;
+        border-radius: 2px;
+        color: #555;
         border: 0;
-        transition: background-color 0.1s;
-        padding: 3px 15px 5px;
+        transition: background-color 0.5s;
+        padding: 8px 20px;
     }
     
     button:hover {
-        background-color: #80cbc4;
+        background-color: #b2dfdb;
     }
     
     .no-button,
     .no-button:hover {
         background: none;
+        color: #fff
     }
     
     .no-button:hover {
