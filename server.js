@@ -18,7 +18,7 @@ const SECRET_PASS = process.env.SECRET_PASS;
 
 // Set up sessions
 const sess = {
-  secret: 'SECRET_PASS',
+  secret: SECRET_PASS,
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
