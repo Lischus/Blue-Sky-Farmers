@@ -9,78 +9,74 @@ let user_answers = [];
 let answerNum;
 
 function startQuiz() {
-    var startScreenEl = document.getElementById('start-screen');
-    startScreenEl.setAttribute('class', 'hide');
-    questionsEl.removeAttribute('class');
-    getQuestion();
+  var startScreenEl = document.getElementById('start-screen');
+  startScreenEl.setAttribute('class', 'hide');
+  questionsEl.removeAttribute('class');
+  getQuestion();
 }
 
 function getQuestion() {
-    var currentQuestion = questions[currentQuestionIndex];
-    var titleEl = document.getElementById('question-title');
-    titleEl.textContent = currentQuestion.title;
+  var currentQuestion = questions[currentQuestionIndex];
+  var titleEl = document.getElementById('question-title');
+  titleEl.textContent = currentQuestion.title;
 
-    choicesEl.innerHTML = '';
+  choicesEl.innerHTML = '';
 
-    // loop over choices
-    currentQuestion.choices.forEach(function(choice, i) {
-        // create new button for each choice
-        var choiceNode = document.createElement('button');
-        choiceNode.setAttribute('class', 'choice');
-        choiceNode.textContent = i + 1 + '. ' + choice;
-        choiceNode.setAttribute('data-number', i + 1);
-        answerNum = choiceNode.getAttribute('data-number')
-            // attach click event listener to each choice
-        choiceNode.onclick = questionClick;
-        // display on the page
-        choicesEl.appendChild(choiceNode);
-    });
+  // loop over choices
+  currentQuestion.choices.forEach(function (choice, i) {
+    // create new button for each choice
+    var choiceNode = document.createElement('button');
+    choiceNode.setAttribute('class', 'choice');
+    choiceNode.textContent = i + 1 + '. ' + choice;
+    choiceNode.setAttribute('data-number', i + 1);
+    answerNum = choiceNode.getAttribute('data-number');
+    // attach click event listener to each choice
+    choiceNode.onclick = questionClick;
+    // display on the page
+    choicesEl.appendChild(choiceNode);
+  });
 }
 
 function questionClick(event) {
-    const ele = event.target;
-    const answerNum = ele.getAttribute("data-number");
-    user_answers.push(answerNum);
-    console.log(user_answers);
-    // move to next question
-    currentQuestionIndex++;
+  const ele = event.target;
+  const answerNum = ele.getAttribute('data-number');
+  user_answers.push(answerNum);
+  console.log(user_answers);
+  // move to next question
+  currentQuestionIndex++;
 
-    // check if we've run out of questions
-    if (currentQuestionIndex === questions.length) {
-        quizEnd();
-    } else {
-        getQuestion();
-    }
+  // check if we've run out of questions
+  if (currentQuestionIndex === questions.length) {
+    quizEnd();
+  } else {
+    getQuestion();
+  }
 }
 
 function quizEnd() {
-    // show end screen
-    var endScreenEl = document.getElementById("end-screen");
-    endScreenEl.removeAttribute("class");
-    // hide questions section
-    questionsEl.setAttribute("class", "hide");
+  // show end screen
+  var endScreenEl = document.getElementById('end-screen');
+  endScreenEl.removeAttribute('class');
+  // hide questions section
+  questionsEl.setAttribute('class', 'hide');
 }
-
-
 
 async function postAnswer(event) {
-    event.preventDefault();
-    const response = await fetch(`/api/mymatch/quiz`, {
-        method: 'POST',
-        body: JSON.stringify({ user_answers }),
-        headers: {
-            'Content-Type': 'application/json',
-        },
-    });
+  event.preventDefault();
+  const response = await fetch(`/api/mymatch/quiz`, {
+    method: 'POST',
+    body: JSON.stringify({ user_answers }),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
 
-    if (response.ok) {
-        document.location.replace(`/mymatch`);
-    } else {
-        alert('Failed to create post');
-    }
+  if (response.ok) {
+    document.location.replace(`/mymatch`);
+  } else {
+    alert('Failed to create post');
+  }
 }
-
-
 
 // user clicks button to submit initials
 submitBtn.onclick = postAnswer;
