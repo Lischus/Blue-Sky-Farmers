@@ -1,93 +1,110 @@
-            <div class="row block">
-                <div class="col s12 m6 l6">
-                    <h3>Login</h3>
-                    <form class="form login-form">
-                        <div class="form-group">
-                            <label for="email-login">Username:</label>
-                            <input class="form-input" type="text" id="username-login" />
-                        </div>
-                        <div class="form-group">
-                            <label for="password-login">Password:</label>
-                            <input class="form-input" type="password" id="password-login" />
-                        </div>
-                        <div class="form-group">
-                            <button class="btn btn-primary" type="submit">login</button>
-                        </div>
-                    </form>
-                   
-                </div>
-                  <div class="col s12 m6 l6">
-                    <h3>Sign Up</h3>
+<div class='row block'>
+  <div class='col s12 m6 l6'>
+    <h3>Login</h3>
+    <form class='form login-form'>
+      <div class='form-group'>
+        <label for='email-login'>Username:</label>
+        <input class='form-input' type='text' id='username-login' />
+      </div>
+      <div class='form-group'>
+        <label for='password-login'>Password:</label>
+        <input class='form-input' type='password' id='password-login' />
+      </div>
+      <div class='form-group'>
+        <button class='btn btn-primary' type='submit'>login</button>
+      </div>
+    </form>
 
-                    <form class="form signup-form">
-                                 
-                        <div class="form-group">
-                            <label for="username-signup">Username:</label>
-                            <input class="form-input" type="text" id="username-signup" />
-                        </div>
-                        <div class="form-group">
-                            <label for="password-signup">password:</label>
-                            <input class="form-input" type="password" id="password-signup" />
-                        </div>
-                        <div class="form-group">
-                            <label for="sex-signup">Gender:</label>
-                                <label>
-                            <input name="sex-signup" value="man" type="radio" />
-                            <span>Male</span>
-                          </label>
-                            <label>
-                            <input name="sex-signup" value="woman" type="radio" checked="true" />
-                            <span>Female</span>
-                          </label>
-                        
-                        </div>
-                        <div class="form-group">
-                           <div class="age-select"> <label for="age-signup">Age:</label>
-                        <select id="age-signup" class="select-form">
-                            <option value="" disabled selected>Choose your age</option>
-                                  <option value="18">18</option>
-                                  <option value="19">19</option>
-                                  <option value="20">20</option>
-                                  <option value="21">21</option>
-                                  <option value="22">22</option>
-                                  <option value="23">23</option>
-                                  <option value="24">24</option>
-                                  <option value="25">25</option>
-                                  <option value="26">26</option>
-                                  <option value="27">27</option>
-                                  <option value="28">28</option>
-                                  <option value="29">29</option>
-                                  <option value="30">30</option>
-                                  <option value="31">31</option>
-                                  <option value="32">32</option>
-                                  <option value="33">33</option>
-                                  <option value="34">34</option>
-                                  <option value="35">35</option>
-                                  <option value="36">36</option>
-                                  <option value="37">37</option>
-                                  <option value="38">38</option>
-                                  <option value="39">39</option>
-                                  <option value="40">40</option>
-                                  <option value="41">41</option>
-                                  <option value="42">42</option>
-                                  <option value="43">43</option>
-                                  <option value="44">44</option>
-                                  <option value="45">45</option>
-                                  <option value="46">46</option>
-                                  <option value="47">47</option>
-                                  <option value="48">48</option>
-                                  <option value="49">49</option>
-                                  <option value="50">50</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <button class="btn btn-primary" type="submit">signup</button>
-                        </div>
-                    </form>
-                   
-                </div>
-            </div>
-         
-            <script src="./js/login.js"></script>
-       
+  </div>
+  <div class='col s12 m6 l6'>
+    <h3>Sign Up</h3>
+
+    <form class='form signup-form'>
+
+      <div class='form-group'>
+        <label for='username-signup'>Username:</label>
+        <input class='form-input' type='text' id='username-signup' />
+      </div>
+      <div class='form-group'>
+        <label for='password-signup'>password:</label>
+        <input class='form-input' type='password' id='password-signup' />
+      </div>
+      <div class='form-group'>
+        <label for='sex-signup'>Gender:</label>
+        <label>
+          <input name='sex-signup' value='man' type='radio' />
+          <span>Male</span>
+        </label>
+        <label>
+          <input name='sex-signup' value='woman' type='radio' checked='true' />
+          <span>Female</span>
+        </label>
+      </div>
+      <div class='form-group'>
+        <label for='group-signup'>Preference?</label>
+        <label>
+          <input name='group-signup' value='1' type='radio' />
+          <span>1: Pizza?</span>
+        </label>
+        <label>
+          <input
+            name='group-signup'
+            value='2'
+            type='radio'
+            checked='true'
+            id='group-signup'
+          />
+          <span>2: Sushi? </span>
+        </label>
+
+      </div>
+      <div class='form-group'>
+        <div class='age-select'>
+          <label for='age-signup'>Age:</label>
+          <select id='age-signup' class='select-form'>
+            <option value='' disabled selected>Choose your age</option>
+            <option value='18'>18</option>
+            <option value='19'>19</option>
+            <option value='20'>20</option>
+            <option value='21'>21</option>
+            <option value='22'>22</option>
+            <option value='23'>23</option>
+            <option value='24'>24</option>
+            <option value='25'>25</option>
+            <option value='26'>26</option>
+            <option value='27'>27</option>
+            <option value='28'>28</option>
+            <option value='29'>29</option>
+            <option value='30'>30</option>
+            <option value='31'>31</option>
+            <option value='32'>32</option>
+            <option value='33'>33</option>
+            <option value='34'>34</option>
+            <option value='35'>35</option>
+            <option value='36'>36</option>
+            <option value='37'>37</option>
+            <option value='38'>38</option>
+            <option value='39'>39</option>
+            <option value='40'>40</option>
+            <option value='41'>41</option>
+            <option value='42'>42</option>
+            <option value='43'>43</option>
+            <option value='44'>44</option>
+            <option value='45'>45</option>
+            <option value='46'>46</option>
+            <option value='47'>47</option>
+            <option value='48'>48</option>
+            <option value='49'>49</option>
+            <option value='50'>50</option>
+          </select>
+        </div>
+      </div>
+      <div class='form-group'>
+        <button class='btn btn-primary' type='submit'>signup</button>
+      </div>
+    </form>
+
+  </div>
+</div>
+
+<script src='./js/login.js'></script>
