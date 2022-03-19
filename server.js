@@ -14,11 +14,12 @@ const routes = require('./controllers');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-const SECRET_PASS = process.env.SECRET_PASS;
+// const SECRET_PASS = process.env.SECRET_PASS;
 
 // Set up sessions
 const sess = {
-  secret: SECRET_PASS,
+  secret: process.env.SECRET_PASS,
+  cookies: {},
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
