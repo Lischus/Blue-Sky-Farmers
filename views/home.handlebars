@@ -1,13 +1,12 @@
- <div class="row">
+<div class='row'>
   <!-- Loop over each item in the array -->
-                {{#each users as |user|}}
-                <div class="col s12 m3">
-                    <div class="icon-block">
-                        <img src="images/{{user.img_url}}.png" class="big-avatar">
-                        <div class="representation">{{user.user_name}}, {{user.age}}</div>
-                        <div class="match"><a class="btn" href="/mymatch">Match</a></div>
-                    </div>
-                </div>
-               
-          {{/each}}
-            </div>
+  {{#each users as |user|}}
+    <div class='col s12 m3'>
+      <div class='icon-block'>
+        <img src='images/{{user.img_url}}.png' class='big-avatar' />
+        <div class='representation'>{{user.user_name}}, {{user.age}}</div>
+      </div>
+    </div>
+
+  {{/each}}
+</div>

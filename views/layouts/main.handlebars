@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
-    <title>Blue Sky Farmer!</title>
+    <title>Blue Sky Farmers!</title>
     <!-- CSS  -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
@@ -12,16 +12,16 @@
 <body>
     <nav class="nav-custom">
         <div class="nav-wrapper container">
-            <a href="/" class="brand-logo">Blue Sky Farmer</a>
+            <a href="/" class="brand-logo">Blue Sky Farmers</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                
                 
                 <li><a href="/chat">Chat</a></li><li><a href="/quiz">Quiz</a></li> <li><a href="/mymatch">My Match</a></li>
                 <!-- Conditionally render login or logout links -->
                 {{#if logged_in}}
-               <li> <button class="no-button" id="logout">logout</button></li>
+               <li> <button class="no-button" id="logout">Logout</button></li>
                 {{else}} 
-               <li><a href="/login">login</a>{{/if}}</li>
+               <li><a href="/login">Login</a>{{/if}}</li>
             </ul>
         </div>
     </nav>
