@@ -10,7 +10,7 @@ This is a full-stack application for the purpose of match-making people with com
 - [Usage](#usage)
 - [Acceptance Criteria](#criteria)
 - [Preview](#Preview)
-- [Credits](#credits) -[Questions](#questions)
+- [Credits](#credits)
 
 ## Installation
 
