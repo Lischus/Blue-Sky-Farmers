@@ -87,7 +87,7 @@ NPM Sequeqlize
 NPM DotEnv  
 NPM Express-Handlebars  
 NPM Path  
-NPM bcrypt
+NPM bcrypt  
 Socket.io
 
 ## Questions
