@@ -1,8 +1,5 @@
 # Blue-Sky-Farmers 
 
-
-
-
 ## Description
 
 This is a full-stack application for the purpose of match-making people with common interest. Whehter it be romantic or platonic, the application can be used to screen and pair users together who are deemed compatible based on the algorithms used.
@@ -28,9 +25,13 @@ Ultimately though, the application will be deployed for public use. This would a
 ## Preview
 
 A video for previewing the usage of this application can be found in the following link
-[Click Here for Video Walkthrough]()
+[Click Here for Video Walkthrough](https://www.youtube.com/watch?v=qnzyNtzgezg)
 
-![Screenshot of Application]()
+![Screenshot of Application](https://user-images.githubusercontent.com/94323045/159127388-6c54de90-e41b-4911-8ea2-dd8eca198f8b.jpg)
+
+![Screenshot of Application](https://user-images.githubusercontent.com/94323045/159127419-2aecaba4-41dd-4e27-a00b-fec3009972f4.jpg)
+
+![Screenshot of Application](https://user-images.githubusercontent.com/94323045/159127437-c06d425f-8527-4b7c-a0fa-e668f73989b1.jpg)
 
 ## Usage
 
@@ -102,4 +103,4 @@ Tyler Gandy's [Git Hub](www.github.com/TyGBenjamin)
 
 
 
-© 2022 Confidential and Proprietary. 
+© 2022 Confidential and Proprietary. All Rights Reserved
