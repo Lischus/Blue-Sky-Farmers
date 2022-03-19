@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const User = require('../../models/User');
 const bcrypt = require('bcrypt');
 
 // GET all Users
@@ -31,25 +31,25 @@ router.get('/:id', async (req, res) => {
 
 // Creating New User
 
-router.post('/', async (req, res) => {
-  try {
-    const userData = await User.create({
-      user_name: req.body.user_name,
-      sex: req.body.sex,
-      age: req.body.age,
-      group_id: req.body.group_id,
-      password: req.body.password,
-    });
+// router.post('/', async (req, res) => {
+//   try {
+//     const userData = await User.create({
+//         user_name: req.body.user_name,
+//         sex: req.body.sex,
+//         age: req.body.age,
+//         password: req.body.password
+//     });
 
-    req.session.save(() => {
-      req.session.logged_in = true;
+//     req.session.save(() => {
+//       req.session.user_id = userData.id;
+//       req.session.logged_in = true;
 
-      res.status(200).json(userData);
-    });
-  } catch (err) {
-    res.status(400).json(err);
-  }
-});
+//       res.status(200).json(userData);
+//     });
+//   } catch (err) {
+//     res.status(400).json(err);
+//   }
+// });
 
 router.post('/login', async (req, res) => {
   try {
