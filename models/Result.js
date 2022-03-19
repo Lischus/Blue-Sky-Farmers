@@ -31,6 +31,14 @@ Result.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    user_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      refernces: {
+        model: 'user',
+        key: 'id',
+      },
+    },
   },
   {
     sequelize,
