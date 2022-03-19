@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a full-stack application for the purpose of match-making people with common interest. Whehter it be romantic or platonic, the application can be used to screen and pair users together who are deemed compatible based on the algorithms used.
+This is a full-stack application for the purpose of match-making people with common interest. Whehter it be romantic, platonic, or for business purposes the application can be used to screen and pair users together who are deemed compatible based on the algorithms used.
 
 ## Table of Contents
 
