@@ -88,6 +88,7 @@ NPM DotEnv
 NPM Express-Handlebars  
 NPM Path  
 NPM bcrypt
+Socket.io
 
 ## Questions
 
