@@ -27,6 +27,8 @@ Ultimately though, the application will be deployed for public use. This would a
 A video for previewing the usage of this application can be found in the following link
 [Click Here for Video Walkthrough](https://www.youtube.com/watch?v=qnzyNtzgezg)
 
+The Live Demo can be viewed here [LIVE DEMO](https://radiant-caverns-76977.herokuapp.com/)
+
 ![Screenshot of Application](https://user-images.githubusercontent.com/94323045/159127388-6c54de90-e41b-4911-8ea2-dd8eca198f8b.jpg)
 
 ![Screenshot of Application](https://user-images.githubusercontent.com/94323045/159127419-2aecaba4-41dd-4e27-a00b-fec3009972f4.jpg)
