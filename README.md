@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a full-stack application for the purpose of match-making people with common interest. Whehter it be romantic, platonic, or for business purposes the application can be used to screen and pair users together who are deemed compatible based on the algorithms used.
+This is a full-stack application for the purpose of match-making people with common interest. Whehter it be romantic, platonic, or for business purposes the application can be used to screen and pair users together who are compatible based on the algorithms used.
 
 ## Table of Contents
 
@@ -10,7 +10,7 @@ This is a full-stack application for the purpose of match-making people with com
 - [Usage](#usage)
 - [Acceptance Criteria](#criteria)
 - [Preview](#Preview)
-- [Credits](#credits) -[Questions](#questions)
+- [Credits](#credits)
 
 ## Installation
 
@@ -26,6 +26,8 @@ Ultimately though, the application will be deployed for public use. This would a
 
 A video for previewing the usage of this application can be found in the following link
 [Click Here for Video Walkthrough](https://www.youtube.com/watch?v=qnzyNtzgezg)
+
+The Live Demo can be viewed here [LIVE DEMO](https://radiant-caverns-76977.herokuapp.com/)
 
 ![Screenshot of Application](https://user-images.githubusercontent.com/94323045/159127388-6c54de90-e41b-4911-8ea2-dd8eca198f8b.jpg)
 
